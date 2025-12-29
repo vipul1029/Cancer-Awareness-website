@@ -48,7 +48,7 @@ export default function Impact() {
           </h2>
 
           <p className="text-gray-600 text-lg mb-6">
-            Cancer is not just a medical journey — it is emotional,
+            Cancer is not just a medical journey it is emotional,
             psychological, and social. True healing comes from awareness,
             compassion, and strong community support.
           </p>
