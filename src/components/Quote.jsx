@@ -6,20 +6,16 @@ export default function Quote() {
 
   const fetchQuote = async () => {
     try {
-      const res = await fetch(
-        "https://api.quotable.io/random?tags=hope|inspirational|life",
-        { cache: "no-store" }
-      );
+      const res = await fetch("https://zenquotes.io/api/random");
       const data = await res.json();
       setQuote({
-        text: data.content,
-        author: data.author,
+        text: data[0].q,
+        author: data[0].a,
       });
     } catch {
       setQuote({
-        text:
-          "Hope is being able to see that there is light despite all of the darkness.",
-        author: "Desmond Tutu",
+        text: "Hope is stronger than fear.",
+        author: "Unknown",
       });
     }
   };
@@ -33,11 +29,9 @@ export default function Quote() {
       id="quotes"
       className="relative py-36 px-6 bg-gradient-to-br from-white via-blue-50 to-indigo-50"
     >
-      
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[420px] h-[420px] bg-blue-200/30 blur-[140px] -z-10" />
 
       <div className="max-w-4xl mx-auto text-center">
-        
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -48,7 +42,6 @@ export default function Quote() {
           A moment of strength
         </motion.p>
 
-      
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -59,7 +52,6 @@ export default function Quote() {
           Words That Matter
         </motion.h2>
 
-        
         <div className="relative glass-card px-8 py-12 md:px-14 md:py-16">
           <AnimatePresence mode="wait">
             {quote && (
@@ -82,7 +74,6 @@ export default function Quote() {
           </AnimatePresence>
         </div>
 
-        
         <motion.button
           whileHover={{ scale: 1.04 }}
           whileTap={{ scale: 0.96 }}
