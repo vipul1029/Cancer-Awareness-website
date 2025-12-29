@@ -65,4 +65,3 @@ The goal was to build something simple, human, and impactful.
 - **Vercel** – Deployment and hosting  
 - **Serverless API** – Quote handling without a traditional backend  
 
----
