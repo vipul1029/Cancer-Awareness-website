@@ -25,64 +25,83 @@ export default function Awareness() {
   return (
     <section
       id="awareness"
-      className="relative py-28 bg-blue-50 px-6 overflow-hidden"
+      className="relative overflow-hidden
+                 bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-100
+                 py-20 px-6"
     >
       
-      <div className="absolute -top-20 -right-20 w-80 h-80 bg-blue-100 rounded-full blur-3xl opacity-40 -z-10" />
-      <div className="absolute bottom-10 -left-20 w-80 h-80 bg-indigo-100 rounded-full blur-3xl opacity-40 -z-10" />
+      <div className="absolute -top-24 -left-24 w-[28rem] h-[28rem] bg-sky-300/20 rounded-full blur-[180px]" />
+      <div className="absolute bottom-[-25%] right-[-20%] w-[32rem] h-[32rem] bg-indigo-400/20 rounded-full blur-[200px]" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[22rem] h-[22rem] bg-cyan-300/15 rounded-full blur-[160px]" />
 
-    
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
-        className="max-w-4xl mx-auto text-center mb-16"
-      >
-        <h2 className="section-title">
-          Why Cancer Awareness Matters
-        </h2>
-        <p className="section-text">
-          Awareness empowers individuals with knowledge, encourages early
-          action, and builds a supportive community that stands together
-          against cancer.
-        </p>
-      </motion.div>
+        animate={{ opacity: [0.22, 0.35, 0.22] }}
+        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute inset-0 bg-gradient-to-r
+                   from-sky-200/15 via-cyan-200/15 to-indigo-200/15"
+      />
 
-    
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-        {awarenessData.map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.15, duration: 0.6 }}
-            whileHover={{ y: -10 }}
-            className="glass-card p-8 text-center"
-          >
-            
-            <img
-              src={item.icon}
-              alt={item.title}
-              className="w-14 h-14 mx-auto mb-6"
-            />
+      <div className="relative max-w-6xl mx-auto">
 
-            
-            <span className="inline-block mb-3 text-sm font-semibold text-blue-600">
-              0{index + 1}
-            </span>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="text-center max-w-3xl mx-auto mb-14"
+        >
+          <span className="text-sm uppercase tracking-widest text-blue-600">
+            Awareness & Education
+          </span>
 
-            <h3 className="text-xl font-semibold text-gray-800 mb-3">
-              {item.title}
-            </h3>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mt-4 mb-4">
+            Why Cancer Awareness Matters
+          </h2>
 
-           
-            <p className="text-gray-600 leading-relaxed">
-              {item.description}
-            </p>
-          </motion.div>
-        ))}
+          <p className="text-gray-600 text-lg">
+            Awareness empowers individuals with knowledge, encourages early
+            action, and builds a compassionate community.
+          </p>
+        </motion.div>
+
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {awarenessData.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.12, duration: 0.6 }}
+              whileHover={{ y: -8 }}
+              className="glass-card p-8 text-center relative"
+            >
+              <div className="absolute inset-0 bg-blue-200/10 rounded-2xl blur-xl -z-10" />
+
+              <div className="w-14 h-14 mx-auto mb-5 flex items-center justify-center
+                              rounded-full bg-blue-100">
+                <img
+                  src={item.icon}
+                  alt={item.title}
+                  className="w-7 h-7"
+                />
+              </div>
+
+              <span className="inline-block mb-2 text-sm font-semibold text-blue-600">
+                Step 0{index + 1}
+              </span>
+
+              <h3 className="text-lg font-semibold text-gray-800 mb-3">
+                {item.title}
+              </h3>
+
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {item.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

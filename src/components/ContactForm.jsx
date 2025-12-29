@@ -4,11 +4,29 @@ export default function ContactForm() {
   return (
     <section
       id="contact"
-      className="relative py-36 px-6 bg-white overflow-hidden"
+      className="relative py-36 px-6 overflow-hidden
+                 bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-100"
     >
-      <div className="absolute top-20 right-10 w-80 h-80 bg-blue-100 rounded-full blur-3xl opacity-40 -z-10" />
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div className="absolute -top-32 -right-32 w-[36rem] h-[36rem]
+                      bg-sky-300/25 rounded-full blur-[220px]" />
+      <div className="absolute bottom-[-30%] left-[-20%] w-[44rem] h-[44rem]
+                      bg-indigo-400/25 rounded-full blur-[260px]" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2
+                      w-[30rem] h-[30rem]
+                      bg-cyan-300/20 rounded-full blur-[200px]" />
+
+      <motion.div
+        animate={{ opacity: [0.3, 0.5, 0.3] }}
+        transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute inset-0 bg-gradient-to-r
+                   from-sky-200/20 via-cyan-200/20 to-indigo-200/20"
+      />
+
+      
+      <div className="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
+        
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -26,7 +44,7 @@ export default function ContactForm() {
           <p className="text-gray-600 text-lg leading-relaxed mb-6">
             If you or someone you care about is affected by cancer, we’re here
             to listen. Whether you have questions, need guidance, or simply want
-            to share your thoughts — reaching out is a strong first step.
+            to share your thoughts reaching out is a strong first step.
           </p>
 
           <p className="text-gray-500 mb-10">
@@ -34,13 +52,18 @@ export default function ContactForm() {
             No personal data is stored.
           </p>
 
-          <img
+          <motion.img
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
             src="/contact.jpg"
             alt="Support and listening illustration"
-            className="w-full max-w-sm mx-auto md:mx-0"
+            className="w-full max-w-sm mx-auto md:mx-0 rounded-xl"
           />
         </motion.div>
 
+        
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -95,6 +118,7 @@ export default function ContactForm() {
             </motion.button>
           </form>
         </motion.div>
+
       </div>
     </section>
   );
