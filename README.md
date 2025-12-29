@@ -11,7 +11,7 @@ This project focuses on empathy, clarity, and simplicity — combining meaningfu
 
 ## 🌱 Why I Built This
 
-Cancer is not just a medical condition — it affects emotional, mental, and social well-being.  
+Cancer is not just a medical condition it affects emotional, mental, and social well-being.  
 Through this project, I wanted to create a space that:
 
 - Educates people about the importance of awareness  
