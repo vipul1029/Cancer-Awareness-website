@@ -1,28 +1,31 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const quotes = [
+  {
+    text: "Hope is being able to see that there is light despite all of the darkness.",
+    author: "Desmond Tutu",
+  },
+  {
+    text: "Cancer may have started the fight, but I will finish it.",
+    author: "Unknown",
+  },
+  {
+    text: "You are stronger than you know, braver than you believe.",
+    author: "A.A. Milne",
+  },
+  {
+    text: "Once you choose hope, anything is possible.",
+    author: "Christopher Reeve",
+  },
+];
+
 export default function Quote() {
-  const [quote, setQuote] = useState(null);
+  const [index, setIndex] = useState(0);
 
-  const fetchQuote = async () => {
-    try {
-      const res = await fetch("https://zenquotes.io/api/random");
-      const data = await res.json();
-      setQuote({
-        text: data[0].q,
-        author: data[0].a,
-      });
-    } catch {
-      setQuote({
-        text: "Hope is stronger than fear.",
-        author: "Unknown",
-      });
-    }
+  const nextQuote = () => {
+    setIndex((prev) => (prev + 1) % quotes.length);
   };
-
-  useEffect(() => {
-    fetchQuote();
-  }, []);
 
   return (
     <section
@@ -54,30 +57,28 @@ export default function Quote() {
 
         <div className="relative glass-card px-8 py-12 md:px-14 md:py-16">
           <AnimatePresence mode="wait">
-            {quote && (
-              <motion.div
-                key={quote.text}
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -12 }}
-                transition={{ duration: 0.45 }}
-              >
-                <p className="quote-font text-2xl md:text-3xl italic text-gray-700 leading-relaxed mb-6">
-                  “{quote.text}”
-                </p>
+            <motion.div
+              key={quotes[index].text}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.45 }}
+            >
+              <p className="quote-font text-2xl md:text-3xl italic text-gray-700 leading-relaxed mb-6">
+                “{quotes[index].text}”
+              </p>
 
-                <p className="text-gray-500 text-lg">
-                  — {quote.author}
-                </p>
-              </motion.div>
-            )}
+              <p className="text-gray-500 text-lg">
+                — {quotes[index].author}
+              </p>
+            </motion.div>
           </AnimatePresence>
         </div>
 
         <motion.button
           whileHover={{ scale: 1.04 }}
           whileTap={{ scale: 0.96 }}
-          onClick={fetchQuote}
+          onClick={nextQuote}
           className="mt-14 bg-blue-600 text-white px-10 py-3 rounded-full text-lg
                      hover:bg-blue-700 transition shadow-sm"
         >
