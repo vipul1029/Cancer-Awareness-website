@@ -55,8 +55,8 @@ export default function Impact() {
 
         
           <ul className="space-y-3 text-gray-600 text-lg">
-            <li>• Emotional and mental well-being support</li>
-            <li>• Awareness-driven early action</li>
+            <li>• Emotional and mental well being support</li>
+            <li>• Awareness driven early action</li>
             <li>• Community strength and shared hope</li>
           </ul>
         </motion.div>
