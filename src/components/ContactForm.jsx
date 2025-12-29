@@ -26,7 +26,7 @@ export default function ContactForm() {
           <p className="text-gray-600 text-lg leading-relaxed mb-6">
             If you or someone you care about is affected by cancer, we’re here
             to listen. Whether you have questions, need guidance, or simply want
-            to share your thoughts — reaching out is a strong first step.
+            to share your thoughts reaching out is a strong first step.
           </p>
 
           <p className="text-gray-500 mb-10">
