@@ -6,7 +6,7 @@ export default function Footer() {
                        bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-100
                        pt-20 pb-10 px-6">
       
-      {/* Background accents */}
+      
       <div className="absolute -top-24 left-1/2 -translate-x-1/2
                       w-[28rem] h-[28rem]
                       bg-blue-300/20 rounded-full blur-[180px] -z-10" />
@@ -16,10 +16,10 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto">
 
-        {/* Top Section */}
+        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-14 mb-14">
 
-          {/* Brand */}
+          
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +35,7 @@ export default function Footer() {
             </p>
           </motion.div>
 
-          {/* Navigation */}
+          
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Message */}
+          
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -71,7 +71,7 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        {/* Divider */}
+        
         <div className="border-t border-blue-100 pt-6 flex flex-col sm:flex-row
                         items-center justify-between gap-4">
 
