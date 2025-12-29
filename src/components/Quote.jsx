@@ -14,8 +14,8 @@ export default function Quote() {
       });
     } catch {
       setQuote({
-        text: "Hope is stronger than fear.",
-        author: "Unknown",
+        text: "Hope is being able to see that there is light despite all of the darkness.",
+        author: "Desmond Tutu",
       });
     }
   };
