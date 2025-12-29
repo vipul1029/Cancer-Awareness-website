@@ -3,19 +3,19 @@ import { motion } from "framer-motion";
 const awarenessData = [
   {
     title: "Early Detection",
-    icon: "public/icon1.svg",
+    icon: "icon1.svg",
     description:
       "Regular screenings and early diagnosis significantly improve survival rates. Awareness helps people recognize symptoms and seek medical help sooner.",
   },
   {
     title: "Emotional & Mental Support",
-    icon: "public/icon2.svg",
+    icon: "icon2.svg",
     description:
       "Cancer affects mental health as much as physical health. Emotional support, counseling, and community care play a vital role in recovery.",
   },
   {
     title: "Healthy Lifestyle Choices",
-    icon: "public/icon3.svg",
+    icon: "icon3.svg",
     description:
       "Balanced nutrition, physical activity, and avoiding harmful habits can reduce cancer risk and support overall well-being.",
   },
