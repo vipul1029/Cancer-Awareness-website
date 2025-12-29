@@ -1,16 +1,68 @@
-# React + Vite
+# 🎗️ Cancer Awareness & Support
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Cancer Awareness & Support is a thoughtfully designed web application created to spread awareness about cancer, encourage early detection, and remind people that no one has to face this journey alone.
 
-Currently, two official plugins are available:
+This project focuses on empathy, clarity, and simplicity — combining meaningful content with a clean, modern user interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌐 **Live Website:**  
+👉 https://cancer-awareness-website-ten.vercel.app/
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🌱 Why I Built This
 
-## Expanding the ESLint configuration
+Cancer is not just a medical condition — it affects emotional, mental, and social well-being.  
+Through this project, I wanted to create a space that:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Educates people about the importance of awareness  
+- Encourages early action and informed decisions  
+- Provides emotional reassurance through thoughtful design and words  
+
+The goal was to build something simple, human, and impactful.
+
+---
+
+## ✨ What This Website Includes
+
+- 🏠 **Landing Page**  
+  A welcoming hero section with a strong message and visual focus on hope and support.
+
+- 📊 **Donation Tracking Dashboard (Dummy Data)**  
+  Displays:
+  - Total donations received  
+  - Number of donors  
+  - Monthly donation trends using a simple chart  
+
+- 🎯 **Mission Section**  
+  Clearly explains the purpose and values behind the initiative.
+
+- 💡 **Awareness Section**  
+  Highlights key aspects such as early detection, emotional support, and healthy lifestyle choices.
+
+- ❤️ **Impact Section**  
+  Focuses on community strength and support beyond medical treatment.
+
+- ✍️ **Contact Form**  
+  A simple form (Name, Email, Message) to encourage people to reach out.  
+  *No backend is used, as per the assignment requirement.*
+
+- 💬 **Inspirational Quotes Section**  
+  Displays motivational and hope-driven quotes.
+  - Uses a serverless API route
+  - Includes a fallback to ensure reliability in production environments
+
+- 📱 **Fully Responsive Design**  
+  Works smoothly across mobile, tablet, and desktop devices.
+
+---
+
+## 🛠️ Tech Stack Used
+
+- **React.js** – Component-based UI development  
+- **Tailwind CSS** – Modern, utility-first styling  
+- **Framer Motion** – Smooth and meaningful animations  
+- **Recharts** – Clean and readable charts for the dashboard  
+- **Vercel** – Deployment and hosting  
+- **Serverless API** – Quote handling without a traditional backend  
+
+---
