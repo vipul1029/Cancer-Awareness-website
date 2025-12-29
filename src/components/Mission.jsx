@@ -45,7 +45,7 @@ export default function Mission() {
           </h2>
 
           <p className="text-gray-600 text-lg leading-relaxed mb-6">
-            Cancer is not only a medical condition — it affects emotional,
+            Cancer is not only a medical condition it affects emotional,
             social, and psychological well-being. Our mission is to ensure that
             no one feels unprepared or unsupported when facing this challenge.
           </p>
